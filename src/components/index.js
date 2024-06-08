@@ -3,6 +3,6 @@ import Navbar from "./Navbar.jsx";
 import Experience from "./Experience.jsx";
 import Hero from "./Hero.jsx";
 import Projects from "./Projects.jsx";
-import PoleCanvas from "./Pole.jsx";
+import About from "./About.jsx";
 
-export { Contact, Navbar, Experience, Hero, Projects, PoleCanvas };
+export { Contact, Navbar, Experience, Hero, Projects, About };

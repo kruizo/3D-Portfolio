@@ -36,10 +36,10 @@
   color: transparent;
   background: linear-gradient(
     90deg,
-    #51381e,
+    #ffc402,
     rgba(255, 81, 47, 0.679),
     rgba(255, 81, 47, 1),
-    #51381e
+    #ffc402
   );
   background-size: 200% 200%;
   -webkit-background-clip: text;

@@ -6,6 +6,7 @@ import {
   Projects,
   Experience,
   Hero,
+  About,
 } from "./components/index";
 
 function App() {
@@ -30,12 +31,14 @@ function App() {
             <Hero scrollContainer={wrapperRef} />
           </div>
         </div>
+        <div id="about" className="relative z-30  mt-[-2px]">
+          <About />
+        </div>
+
         <div id="projects" className="relative z-30  mt-[-2px]">
           <Projects />
         </div>
-        <div id="experience" className="relative z-30  mt-[-2px]">
-          <Experience />
-        </div>
+
         <div id="contact" className="relative z-30  mt-[-2px]">
           <Contact />
         </div>

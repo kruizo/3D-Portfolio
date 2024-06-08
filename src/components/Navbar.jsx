@@ -42,10 +42,17 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed z-50 flex justify-between p-16 w-full">
+      <div className="fixed z-50 flex justify-between items-center p-16 w-full">
         <h1 className="text-black dark:text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer">
           BKR
         </h1>
+        {/* <img
+          src="../public/logo.png"
+          alt=""
+          srcset=""
+          className="h-14"
+          width={100}
+        /> */}
         <ThemeToggler />
       </div>
       <nav className=" w-fit right-0 fixed flex h-full items-center bg-gradient-to-b from-black sm:bg-none p-8  sm:py-10 -ml- z-40 pointer-events-none">
@@ -57,11 +64,7 @@ const Navbar = () => {
               setActive("hero");
               window.scrollTo(0, 0);
             }}
-          >
-            {/* <p className="text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer flex">
-            BKR.cmp
-          </p> */}
-          </NavLink>
+          ></NavLink>
 
           <ul className="list-none hidden sm:flex flex-col gap-5">
             {navLinks.map((nav) => (

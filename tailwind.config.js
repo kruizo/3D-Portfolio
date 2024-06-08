@@ -11,6 +11,12 @@ export default {
         secondary: "#ff512f",
         white: "#dfdfdf",
       },
+      fontSize: {
+        xl: "100px",
+        lg: "61px",
+        md: "50px",
+        sm: "20px",
+      },
       keyframes: {
         textRotate1: {
           "0%, 40%": {

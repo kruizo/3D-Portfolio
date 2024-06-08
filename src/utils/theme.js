@@ -25,15 +25,13 @@ window.onload = function () {
   const themeSwitch = () => {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
-      //   document.querySelector(".main").classList.remove("bg-primary");
-      //   document.querySelector(".main").classList.add("bg-white");
+
       checkbox.checked = false;
       localStorage.setItem("theme", "light");
       console.log("manual" + localStorage.getItem("theme"));
       return;
     }
-    // document.querySelector(".main").classList.add("bg-primary");
-    // document.querySelector(".main").classList.remove("bg-white");
+
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
     checkbox.checked = true;
