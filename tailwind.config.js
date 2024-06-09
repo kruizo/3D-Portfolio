@@ -10,12 +10,15 @@ export default {
         black: "#040404",
         secondary: "#ff512f",
         white: "#dfdfdf",
+        "slate-50": "#C2C2C2",
+        "slate-100": "#5b5b5b",
       },
       fontSize: {
         xl: "100px",
         lg: "61px",
         md: "50px",
         sm: "20px",
+        base: "25px",
       },
       keyframes: {
         textRotate1: {

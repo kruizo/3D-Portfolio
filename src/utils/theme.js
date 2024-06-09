@@ -1,19 +1,16 @@
 window.onload = function () {
-  const checkbox = document.querySelector('.switch input[type="checkbox"]');
+  const checkbox = document.querySelectorAll('.switch input[type="checkbox"]');
   console.log("Checkbox:", checkbox);
 
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
+  const checked = checkbox.forEach((check) => check.checked);
   const themeCheck = () => {
     // checkbox.checked = true;
-    if (
-      userTheme === "dark" ||
-      (!userTheme && systemTheme) ||
-      checkbox.checked
-    ) {
+    if (userTheme === "dark" || (!userTheme && systemTheme) || checked) {
       document.documentElement.classList.add("dark");
-      checkbox.checked = true;
+      checkbox.forEach((check) => (check.checked = true));
     } else {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
@@ -26,7 +23,7 @@ window.onload = function () {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
 
-      checkbox.checked = false;
+      checkbox.forEach((check) => (check.checked = false));
       localStorage.setItem("theme", "light");
       console.log("manual" + localStorage.getItem("theme"));
       return;
@@ -34,13 +31,13 @@ window.onload = function () {
 
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
-    checkbox.checked = true;
+    checkbox.forEach((check) => (check.checked = true));
 
     console.log(localStorage.getItem("theme"));
   };
 
   if (checkbox) {
-    checkbox.addEventListener("change", themeSwitch);
+    checkbox.forEach((check) => check.addEventListener("change", themeSwitch));
   }
 
   themeCheck();

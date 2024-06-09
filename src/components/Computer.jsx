@@ -1,11 +1,11 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "./Loader";
+import model from "../assets/desktop_pc/scene.gltf";
 
-const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+const Computers = ({ scale }) => {
+  const computer = useGLTF(model);
 
   return (
     <mesh>
@@ -21,8 +21,8 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={40} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -2, -1.5]}
+        scale={scale}
+        position={[0, -1.5, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -30,22 +30,31 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [scale, setScale] = useState(0.75);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
+    const updateScale = () => {
+      const width = window.innerWidth;
 
-    setIsMobile(mediaQuery.matches);
-
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
+      if (width <= 1000) {
+        setScale(0.6);
+      } else if (width <= 1279) {
+        setScale(0.7);
+      } else if (width <= 1400) {
+        setScale(0.6);
+      } else if (width <= 1600) {
+        setScale(0.7);
+      } else if (width <= 2100) {
+        setScale(0.9);
+      } else {
+        setScale(0.71);
+      }
     };
 
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
+    updateScale();
+    window.addEventListener("resize", updateScale);
+
+    return () => window.removeEventListener("resize", updateScale);
   }, []);
 
   return (
@@ -63,7 +72,7 @@ const ComputersCanvas = () => {
           minPolarAngle={Math.PI / 2}
           autoRotate
         />
-        <Computers isMobile={isMobile} />
+        <Computers scale={scale} />
       </Suspense>
 
       <Preload all />

@@ -5,9 +5,9 @@ function Projects() {
   return (
     <section id="portfolio">
       <div className="h-screen flex justify-center items-center">
-        <div className="relative flex gap-5 justify-between h-1/2">
+        <div className="relative block xl:flex gap-5 justify-between h-1/2">
           {cardImages.map((image, key) => (
-            <div className="card w-40 h-full ">
+            <div className="card w-full xl:w-40 h-full ">
               <img
                 key={key}
                 src={image.url}

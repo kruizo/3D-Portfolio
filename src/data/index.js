@@ -1,3 +1,5 @@
+import * as image from "../assets/images/index.js";
+
 export const navLinks = [
   {
     id: "hero",
@@ -5,11 +7,15 @@ export const navLinks = [
   },
   {
     id: "about",
-    title: "About Me",
+    title: "About",
+  },
+  {
+    id: "skills",
+    title: "Skills",
   },
   // {
-  //   id: "experience",
-  //   title: "Skills",
+  //   id: "services",
+  //   title: "Services",
   // },
   {
     id: "projects",
@@ -20,6 +26,115 @@ export const navLinks = [
     title: "Contact",
   },
 ];
+
+export const skills = [
+  {
+    name: "HTML",
+    image: image.html,
+    progress: 0.923,
+    description:
+      "Proficient in crafting structured and semantic markup for web development projects, ensuring accessibility and search engine optimization. Experienced in utilizing HTML5 features and best practices to create modern and responsive web interfaces.",
+  },
+  {
+    name: "CSS",
+    image: image.css,
+    progress: 0.76,
+    description:
+      "Skilled in styling and layout design to create visually appealing and responsive user interfaces, using CSS preprocessors like Sass for efficient styling management. Experienced in implementing CSS frameworks such as Bootstrap to streamline development and ensure cross-browser compatibility.",
+  },
+  {
+    name: "React",
+    image: image.react,
+    progress: 0.6321,
+    description:
+      "Experienced in building dynamic frontend applications with React.js for enhanced user experience, utilizing features like hooks and context API for state management and component composition. Proficient in optimizing React applications for performance and scalability using techniques like code splitting and lazy loading.",
+  },
+  {
+    name: "Java",
+    image: image.java,
+    progress: 0.67,
+    description:
+      "Capable of developing robust backend systems using Java for reliability and performance, leveraging frameworks like Spring Boot for rapid application development and dependency injection. Experienced in building scalable and secure enterprise applications using Java EE technologies like Servlets and JSP.",
+  },
+  {
+    name: "Javascript",
+    image: image.js,
+    progress: 0.753,
+    description:
+      "Proficient in implementing client-side logic and dynamic behavior with JavaScript for engaging web applications, utilizing modern ES6+ features like arrow functions and destructuring. Experienced in working with JavaScript libraries and frameworks such as jQuery and Vue.js to simplify DOM manipulation and state management.",
+  },
+  {
+    name: "Laravel",
+    image: image.laravel,
+    progress: 0.724,
+    description:
+      "Skilled in developing efficient and maintainable PHP-based web applications using Laravel for code readability and elegance, utilizing features like Eloquent ORM for database interaction and Blade templating engine for dynamic content rendering. Experienced in building RESTful APIs and implementing authentication and authorization mechanisms using Laravel Passport.",
+  },
+  {
+    name: "Next",
+    image: image.next,
+    progress: 0.535,
+    description:
+      "Knowledgeable in leveraging Next.js features for server-side rendering and building optimized React applications, improving SEO and initial page load performance. Experienced in implementing data fetching strategies like server-side rendering and static site generation to enhance application performance and user experience.",
+  },
+  {
+    name: "NodeJS",
+    image: image.nodejs,
+    progress: 0.555,
+    description:
+      "Experienced in developing server-side applications and APIs with Node.js for its asynchronous and event-driven architecture, utilizing frameworks like Express.js for routing and middleware management. Proficient in integrating with NoSQL and SQL databases like MongoDB and MySQL for data storage and retrieval.",
+  },
+  {
+    name: "PHP",
+    image: image.php,
+    progress: 0.65,
+    description:
+      "Proficient in developing server-side scripts and dynamic web applications using PHP for seamless integration with databases, using frameworks like Symfony and CodeIgniter for MVC architecture and modular development. Experienced in implementing PHP extensions like GD for image manipulation and processing.",
+  },
+  {
+    name: "Pythont",
+    image: image.python,
+    progress: 0.621,
+    description:
+      "Skilled in utilizing Python's versatility for web development, data analysis, and automation tasks, leveraging frameworks like Django and Flask for building scalable and maintainable web applications. Experienced in working with libraries like NumPy and pandas for data manipulation and analysis in scientific computing and machine learning projects.",
+  },
+  {
+    name: "MySQL",
+    image: image.sql,
+    progress: 0.816,
+    description:
+      "Experienced in designing and managing relational databases with MySQL for efficient data storage and retrieval, optimizing database schema and queries for performance. Proficient in implementing data integrity constraints and transactions to maintain data consistency and reliability.",
+  },
+  {
+    name: "Firebase",
+    image: image.firebase,
+    progress: 0.413,
+    description:
+      "Knowledgeable in integrating Firebase services for authentication, data storage, and real-time database management, enabling rapid development and deployment of web and mobile applications. Experienced in utilizing Firestore and Realtime Database for scalable and synchronized data storage, and Firebase Authentication for secure user authentication.",
+  },
+  {
+    name: "C#",
+    image: image.cs,
+    progress: 0.4,
+    description:
+      "Skilled in developing desktop, web, and mobile applications with C# and the .NET framework, focusing on performance and scalability. Experienced in building cross-platform applications using Xamarin.Forms and ASP.NET Core for seamless development across different platforms and devices.",
+  },
+];
+
+// export const skills = {
+//   html: { name: "HTML", image: image.html },
+//   css: { name: "CSS", image: image.css },
+//   react: { name: "React", image: image.react },
+//   java: { name: "Java", image: image.java },
+//   javascript: { name: "Javascript", image: image.js },
+//   laravel: { name: "Laravel", image: image.laravel },
+//   next: { name: "Next", image: image.next },
+//   nodejs: { name: "NodeJS", image: image.nodejs },
+//   php: { name: "PHP", image: image.php },
+//   python: { name: "Python", image: image.python },
+//   mysql: { name: "MySQL", image: image.sql },
+//   firebase: { name: "Firebase", image: image.firebase },
+// };
 
 export const cardImages = [
   {

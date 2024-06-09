@@ -11,7 +11,7 @@ const Hero = ({ scrollContainer }) => {
           <canvas ref={canvasRefLines} id="canvas"></canvas>
         </div>
         <div className="lg:mb-20">
-          <h1 className="text-start font-medium text-black  dark:text-white text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-xl leading-[110px] 2xl:leading-[160px]">
+          <h1 className="text-start font-medium text-black  dark:text-white text-lg xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-xl leading-[110px] 2xl:leading-[160px]">
             Hi, I'm Ken<span className="text-secondary">.</span>
           </h1>
           <Position />

@@ -4,20 +4,32 @@ import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
 import { navLinks } from "../data";
 import ThemeToggler from "./ThemeToggler";
+
 const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
+
       setScrolled(scrollTop > 100);
+
+      if (scrollTop > lastScrollY && scrollTop > 100) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(scrollTop);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   useEffect(() => {
     const sections = document.querySelectorAll("div[id]");
@@ -42,21 +54,59 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed z-50 flex justify-between items-center p-16 w-full">
-        <h1 className="text-black dark:text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer">
-          BKR
-        </h1>
-        {/* <img
-          src="../public/logo.png"
-          alt=""
-          srcset=""
-          className="h-14"
-          width={100}
-        /> */}
-        <ThemeToggler />
+      <div
+        className={`fixed z-50 flex justify-between items-center py-7 backdrop-blur-sm px-16  w-full transition-transform duration-300 ${
+          showNavbar
+            ? "transform translate-y-0 py-7"
+            : "transform -translate-y-full"
+        }`}
+      >
+        <div className="rounded-full backdrop-blur-sm ">
+          <h1 className="text-black dark:text-white text-[26px] lg:text-[36px] font-bold pointer-events-auto cursor-pointer">
+            BKR
+          </h1>
+        </div>
+        <div className="hidden lg:flex w-full z-50  justify-end pointer-events-auto">
+          <ThemeToggler />
+        </div>
+
+        <div className="sm:hidden flex flex-1 justify-end items-center ">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer "
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 absolute top-28 right-12 mx-4 my-2 min-w-[140px] z-30 rounded-xl bg-white dark:bg-slate-900 shadow-lg`}
+          >
+            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+              <ThemeToggler />
+              {navLinks.map((nav) => (
+                <li
+                  key={nav.id}
+                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                    active === nav.id
+                      ? "text-secondary"
+                      : "text-slate-100 dark:text-slate-50"
+                  }`}
+                  onClick={() => {
+                    setToggle(!toggle);
+                    setActive(nav.id);
+                  }}
+                >
+                  <a href={`#${nav.id}`}>{nav.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-      <nav className=" w-fit right-0 fixed flex h-full items-center bg-gradient-to-b from-black sm:bg-none p-8  sm:py-10 -ml- z-40 pointer-events-none">
-        <div className="w-full flex justify-between items-start mx-auto px-5">
+      <nav className="w-fit hidden sm:block right-0 fixed h-full backdrop-blur-none xl:backdrop-blur-sm items-center bg-gradient-to-b sm:bg-none sm:py-10 z-40 px-16">
+        <div className="w-full flex justify-between items-start mx-auto">
           <NavLink
             to="/"
             className="flex items-start"
@@ -66,7 +116,7 @@ const Navbar = () => {
             }}
           ></NavLink>
 
-          <ul className="list-none hidden sm:flex flex-col gap-5">
+          <ul className="list-none h-screen hidden relative sm:flex flex-col justify-center gap-5 ">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
@@ -74,7 +124,7 @@ const Navbar = () => {
                   active === nav.id
                     ? "streaky-glow hover:text-secondary"
                     : "text-slate-500 hover:text-black dark:hover:text-white"
-                }  text-[18px] lg:text-[24px] font-bold pointer-events-auto cursor-pointer`}
+                } text-[18px] lg:text-[24px] font-bold pointer-events-auto cursor-pointer`}
                 onClick={() => setActive(nav.id)}
               >
                 {active === nav.id && (
@@ -84,38 +134,6 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          <div className="sm:hidden flex flex-1 justify-end items-center">
-            <img
-              src={toggle ? close : menu}
-              alt="menu"
-              className="w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer"
-              onClick={() => setToggle(!toggle)}
-            />
-
-            <div
-              className={`${
-                !toggle ? "hidden" : "flex"
-              } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl`}
-            >
-              <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-                {navLinks.map((nav) => (
-                  <li
-                    key={nav.id}
-                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                      active === nav.id ? "text-quaternary" : "text-secondary"
-                    }`}
-                    onClick={() => {
-                      setToggle(!toggle);
-                      setActive(nav.id);
-                    }}
-                  >
-                    <a href={`#${nav.id}`}>{nav.title}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
         <div className="cursor"></div>
       </nav>

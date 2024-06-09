@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useTypewriterAnimation = (
   maxTexts = 1,
@@ -6,7 +6,17 @@ const useTypewriterAnimation = (
   typingSpeed = 10
 ) => {
   const canvasRef = useRef(null);
-  var localtheme = localStorage.getItem("theme");
+
+  const [localtheme, setLocalTheme] = useState(localStorage.getItem("theme"));
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setLocalTheme(localStorage.getItem("theme"));
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -16,8 +26,6 @@ const useTypewriterAnimation = (
     const updateCanvasDimensions = () => {
       canvas.width = parent.offsetWidth;
       canvas.height = parent.offsetHeight;
-      canvas.style.width = `${parent.offsetWidth}px`;
-      canvas.style.height = `${parent.offsetHeight}px`;
     };
 
     updateCanvasDimensions();
@@ -51,16 +59,16 @@ const useTypewriterAnimation = (
       }
 
       draw() {
-        ctx.fillStyle =
-          localtheme === "dark"
-            ? `rgba(255, 255, 255, ${this.opacity})`
-            : `rgba(1,1,1, ${this.opacity})`;
+        const isDark = localtheme === "dark";
+        ctx.fillStyle = isDark
+          ? `rgba(255, 255, 255, ${this.opacity})`
+          : `rgba(0, 0, 0, ${this.opacity})`;
         ctx.font = "20px Courier New";
         ctx.fillText(this.text.slice(0, this.index), this.x, this.y);
 
         // Draw cursor at the end of the current text
         if (this.started) {
-          ctx.fillStyle = `rgba(255,81,47, ${this.opacity})`;
+          ctx.fillStyle = `rgba(255, 81, 47, ${this.opacity})`;
           if (this.cursorBlink % 60 < 30) {
             // Cursor blink effect
             ctx.fillRect(this.x + this.index * 12, this.y - 18, 10, 20); // Adjust the cursor position and size
@@ -166,10 +174,7 @@ const useTypewriterAnimation = (
       }
     }
 
-    window.addEventListener("resize", () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    });
+    window.addEventListener("resize", updateCanvasDimensions);
 
     init();
     animate();
