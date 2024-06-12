@@ -27,6 +27,29 @@ export const navLinks = [
   },
 ];
 
+export const projects = [
+  {
+    name: "Find AI",
+    description: "Search for over 300+ AI's online.",
+    url: "https://github.com/kruizo/find.ai",
+  },
+  {
+    name: "Artify",
+    description: "A andriod art shop gallery made with flutter.",
+    url: "https://github.com/kruizo/flutter-artshop-app",
+  },
+  {
+    name: "MovieNext",
+    description: "A movie rating platform with NextJS and IMDB API",
+    url: "https://github.com/kruizo/MovieNext",
+  },
+  {
+    name: "Adelfor Station",
+    description:
+      "A sales and record tracking system for a water refilling station.",
+    url: "https://github.com/kruizo/adelforstation",
+  },
+];
 export const skills = [
   {
     name: "HTML",

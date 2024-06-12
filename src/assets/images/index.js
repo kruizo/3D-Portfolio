@@ -11,7 +11,9 @@ import react from "./react.png";
 import sql from "./sql.png";
 import firebase from "./firebase.png";
 import cs from "./cs.png";
-
+import database_badge from "./databasebadge.png";
+import htmlcss_badge from "./htmlcssbadge.png";
+import placeholder from "./images.jpg";
 export {
   css,
   html,
@@ -26,4 +28,7 @@ export {
   sql,
   firebase,
   cs,
+  database_badge,
+  placeholder,
+  htmlcss_badge,
 };

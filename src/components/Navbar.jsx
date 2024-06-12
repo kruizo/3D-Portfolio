@@ -11,6 +11,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [padding, setPadding] = useState("py-16");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,12 @@ const Navbar = () => {
       }
 
       setLastScrollY(scrollTop);
+
+      if (scrollTop === 0) {
+        setPadding("py-16");
+      } else {
+        setPadding("py-7");
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,10 +62,8 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed z-50 flex justify-between items-center py-7 backdrop-blur-sm px-16  w-full transition-transform duration-300 ${
-          showNavbar
-            ? "transform translate-y-0 py-7"
-            : "transform -translate-y-full"
+        className={`top-nav fixed z-50 flex justify-between items-center ${padding} transition-all backdrop-blur-sm px-16  w-full duration-300 ${
+          showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
         }`}
       >
         <div className="rounded-full backdrop-blur-sm ">

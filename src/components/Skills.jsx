@@ -5,6 +5,8 @@ import { MotionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../utils/motion";
+import Blob from "./Blob";
+
 function Skills() {
   const columns = [4, 5, 4];
   const honeycombRows = [];
@@ -19,7 +21,21 @@ function Skills() {
   const [hoveredCell, setHoveredCell] = useState(null);
 
   return (
-    <section className="w-full h-screen flex justify-center items-center px-16">
+    <section className="relative w-full min-h-screen flex justify-center items-center px-16">
+      <Blob
+        color={"secondary"}
+        position={"right-[300px] -top-28"}
+        filled={true}
+        width={"w-[150px]"}
+        height={"h-[150px]"}
+      />
+      <Blob
+        color={"secondary"}
+        variant={1}
+        position={"right-[270px] -top-[130px]"}
+        width={"w-[150px]"}
+        height={"h-[150px]"}
+      />
       <div>
         <div className="mb-10 xl:pr-0">
           <motion.div variants={textVariant()}>
@@ -53,7 +69,11 @@ function Skills() {
             {honeycombRows.map((row, rowIndex) => (
               <div key={rowIndex}>
                 {row.map((skill, index) => (
-                  <Tilt key={index} onMouseEnter={() => setHoveredCell(skill)}>
+                  <Tilt
+                    options={{ scale: 1.1, max: 60 }}
+                    key={index}
+                    onMouseEnter={() => setHoveredCell(skill)}
+                  >
                     <motion.div
                       variants={fadeIn("right", "spring", 0.5 * index, 0.25)}
                       className="cell bg-gray-200 relative z-50 "

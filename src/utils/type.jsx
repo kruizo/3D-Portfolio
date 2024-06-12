@@ -32,12 +32,12 @@ const useTypewriterAnimation = (
     window.addEventListener("resize", updateCanvasDimensions);
 
     const texts = [
-      "The Matrix has you...",
-      "Follow the white rabbit.",
-      "Wake up, Neo...",
-      "Knock, knock, Neo.",
-      "There is no spoon.",
-      "Welcome to the real world.",
+      "Made with Three JS 🔥",
+      "Design and be real. ",
+      "VIsit my github. 🚀⭐",
+      "Reach me on my socials 📱",
+      "🔥🔥🔥🔥",
+      "Welcome 👋",
     ];
 
     const particlesArray = [];

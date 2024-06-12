@@ -8,6 +8,7 @@ import {
   Hero,
   About,
 } from "./components/index";
+import StarsCanvas from "./components/Stars";
 
 function App() {
   const wrapperRef = useRef(null);
@@ -24,25 +25,28 @@ function App() {
 
   return (
     <>
-      <div className={`main relative z-0 bg-white dark:bg-primary`}>
+      <div className={`main z-0 bg-white dark:bg-primary`}>
         <Navbar />
         <div className="wrapper" ref={wrapperRef}>
           <div id="hero" className="z-10">
             <Hero scrollContainer={wrapperRef} />
           </div>
         </div>
-        <div id="about" className="relative z-30 ">
-          <About />
-        </div>
-        <div id="skills" className="relative z-30  ">
-          <Skills />
-        </div>
-        <div id="projects" className="relative z-30 ">
-          <Projects />
-        </div>
+        <div className="relative z-0">
+          <StarsCanvas />
+          <div id="about" className="relative z-30 ">
+            <About />
+          </div>
+          <div id="skills" className="relative z-30  ">
+            <Skills />
+          </div>
+          <div id="projects" className="relative z-30 ">
+            <Projects />
+          </div>
 
-        <div id="contact" className="relative z-30 ">
-          <Contact />
+          <div id="contact" className="relative z-30 ">
+            <Contact />
+          </div>
         </div>
       </div>
     </>
