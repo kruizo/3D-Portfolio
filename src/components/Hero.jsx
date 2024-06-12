@@ -6,11 +6,12 @@ const Hero = ({ scrollContainer }) => {
 
   return (
     <section>
-      <div className="hero p-5 h-screen sm:top-[16%] flex flex-col justify-center items-center z-30 relative">
-        <div className="flex justify-center">
+      <div className="hero p-5 h-screen sm:top-[16%] flex flex-col justify-center items-center z-10 relative">
+        <div className="flex justify-center ">
           <a
-            className="inline-flex items-center gap-x-2  text-[1rem] dark:text-slate-50 text-slate-800 p-1 ps-3 rounded-full transition"
-            href="#"
+            href="https://github.com/kruizo"
+            alt="Github Link"
+            className="inline-flex items-center z-50 gap-x-2  text-[1rem] dark:text-slate-50 text-slate-800 p-1 ps-3 rounded-full transition"
           >
             Full Stack Web Developer
             <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-muted-foreground/15 font-semibold text-sm">

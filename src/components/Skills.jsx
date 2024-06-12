@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { skills } from "../data";
 import HexagonalProgress from "./HexagonalProgress";
 import { MotionWrapper } from "../hoc";
@@ -10,7 +10,6 @@ import Blob from "./Blob";
 function Skills() {
   const columns = [4, 5, 4];
   const honeycombRows = [];
-
   let startIndex = 0;
   columns.forEach((numCols) => {
     const row = skills.slice(startIndex, startIndex + numCols);
@@ -20,8 +19,24 @@ function Skills() {
 
   const [hoveredCell, setHoveredCell] = useState(null);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth);
+      setIsMobile(window.innerWidth <= 750);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center px-16">
+    <section className="relative w-full min-h-screen flex justify-center items-center p-6">
       <Blob
         color={"secondary"}
         variant={1}
@@ -29,8 +44,8 @@ function Skills() {
         width={"w-[150px]"}
         height={"h-[150px]"}
       />
-      <div>
-        <div className="mb-10 xl:pr-0">
+      <div className="space-y-5 w-full lg:w-fit pr-0 sm:pr-24 xl:pr-0 xl:w-1/2">
+        <div className="mb-10">
           <motion.div variants={textVariant()}>
             <h1 className="text-lg xl:text-center font-bold text-black dark:text-white ">
               Skills and Tools
@@ -40,9 +55,9 @@ function Skills() {
         </div>
 
         <div className="z-50 w-full">
-          <div className="xl:block md:pr-24 xl:pr-0 max-w-[60rem] lg:h-[10rem] lg:block">
+          <div className="pr-0 lg:pr-16 xl:pr-0 w-full h-[10rem] md:h-[15rem] lg:block">
             {hoveredCell != null ? (
-              <p className="md:text-sm dark:text-slate-50 text-slate-800">
+              <p className="md:text-sm pr-0 lg:pr-16 dark:text-slate-50 text-slate-800">
                 {hoveredCell.description}
               </p>
             ) : (
@@ -57,10 +72,42 @@ function Skills() {
               </p>
             )}
           </div>
+          {isMobile && (
+            <div className="flex mt-20 flex-wrap gap-5 w-full">
+              {skills.map((skill, index) => (
+                <div key={index} className="w-full">
+                  <Tilt
+                    className="w-full h-full"
+                    options={{ scale: 1.1, max: 30 }}
+                    onMouseEnter={() => setHoveredCell(skill)}
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="p-4 shadow-lg dark:shadow-none dark:bg-slate-800 flex justify-between  items-center rounded-lg h-full relative"
+                    >
+                      <div className="text-[10px] font-bold text-black dark:text-white">
+                        {skill.name}
+                      </div>
+                      <div className="text-xs text-secondary">
+                        {(skill.progress * 100).toFixed(2)}%
+                      </div>
+                      <div
+                        className="absolute bottom-0 left-0 bg-secondary"
+                        style={{
+                          width: `${skill.progress * 100}%`,
+                          height: "2px",
+                        }}
+                      />
+                    </motion.div>
+                  </Tilt>
+                </div>
+              ))}
+            </div>
+          )}
 
-          <div className="honeycomb">
+          <div className={` honeycomb ${isMobile ? "hidden" : "nlock"}`}>
             {honeycombRows.map((row, rowIndex) => (
-              <div key={rowIndex}>
+              <div key={rowIndex} cl>
                 {row.map((skill, index) => (
                   <Tilt
                     options={{ scale: 1.1, max: 60 }}
@@ -69,7 +116,7 @@ function Skills() {
                   >
                     <motion.div
                       variants={fadeIn("right", "spring", 0.5 * index, 0.25)}
-                      className="cell bg-gray-200 relative z-40 "
+                      className="cell bg-gray-200 relative z-40  "
                     >
                       {hoveredCell && hoveredCell.name === skill.name ? (
                         <div className="progress-overlay text-center flex flex-col justify-center items-center w-20 h-20">

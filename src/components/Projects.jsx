@@ -1,15 +1,26 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../data";
 import Blob from "./Blob";
 import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
-import { render } from "@react-three/fiber";
 
 function Projects() {
   const [hovered, setHovered] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const colors = ["red", "green", "blue", "yellow"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log(currentImageIndex);
+      if (hovered) {
+        console.log("asd");
+        setCurrentImageIndex(Math.floor(Math.random() * hovered.image.length));
+      }
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [hovered]);
 
   return (
     <section className="relative">
@@ -39,15 +50,12 @@ function Projects() {
                         <div
                           className="relative p-2 w-full hover:z-10 hover:scale-105 transition-transform"
                           key={innerIndex}
-                          onMouseEnter={() => setHovered(project)}
+                          onMouseEnter={() => {
+                            setHovered(project);
+                          }}
                           onMouseLeave={() => setHovered(null)}
                         >
                           <img
-                            // src={
-                            //   project.image[
-                            //     Math.floor(Math.random() * project.image.length)
-                            //   ]
-                            // }
                             src={project.image[0]}
                             className="h-72 w-full object-cover rounded-lg filter image-transition"
                             alt=""
@@ -63,16 +71,38 @@ function Projects() {
                                   "border-l-4"
                                 } border-secondary absolute left-1 transition-all`}
                               ></div>
-                              <h1 className="font-extrabold text-sm">
-                                {project.name}
-                              </h1>
-                              <p
-                                className={`font-thin text-[1rem] text-slate-50`}
-                              >
-                                {hovered && hovered.name === project.name
-                                  ? project.url
-                                  : project.description}
-                              </p>
+                              <div className="flex justify-between">
+                                <div className="justify-between">
+                                  <h1 className="font-extrabold text-sm">
+                                    {project.name}
+                                  </h1>
+
+                                  {hovered && hovered.name === project.name ? (
+                                    <a
+                                      href={project.url}
+                                      className="text-[1rem] font-thin"
+                                    >
+                                      {project.url}
+                                    </a>
+                                  ) : (
+                                    <p
+                                      className={`font-thin text-[1rem] text-slate-50`}
+                                    >
+                                      {project.description}
+                                    </p>
+                                  )}
+                                </div>
+                                <div className="text-end">
+                                  {project.text.map((text, index) => (
+                                    <span
+                                      className={`w-[15rem] text-[.8rem] text-slate-50 z-30`}
+                                      key={index}
+                                    >
+                                      #{text}{" "}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

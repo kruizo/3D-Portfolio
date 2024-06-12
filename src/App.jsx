@@ -28,7 +28,7 @@ function App() {
       <div className={`main z-0 bg-white dark:bg-primary`}>
         <Navbar />
         <div className="wrapper" ref={wrapperRef}>
-          <div id="hero" className="z-10">
+          <div id="hero" className="z-20">
             <Hero scrollContainer={wrapperRef} />
           </div>
         </div>

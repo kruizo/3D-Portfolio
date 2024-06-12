@@ -34,18 +34,21 @@ export const projects = [
     description: "Search for over 300+ AI's online.",
     url: "https://github.com/kruizo/find.ai",
     image: [project.findai_home1, project.findai_home2, project.findai_content],
+    text: ["react", "vite", "tailwind", "javascript", "shadcn"],
   },
   {
     name: "Artify",
     description: "A andriod art shop gallery made with flutter.",
     url: "https://github.com/kruizo/flutter-artshop-app",
-    image: [project.findai_home1, project.findai_home2],
+    image: [project.artify_home],
+    text: ["firebase", "dart", "flutter"],
   },
   {
     name: "MovieNext",
     description: "A movie rating platform with NextJS and IMDB API",
     url: "https://github.com/kruizo/MovieNext",
     image: [project.next_home, project.next_home2],
+    text: ["IMDB", "API", "typescript", "nextJS"],
   },
   {
     name: "Adelfor Station",
@@ -60,6 +63,7 @@ export const projects = [
       project.adelfor_5,
       project.adelfor_6,
     ],
+    text: ["laravel", "PHP", "composer", "XAMPP", "SQL", "Auth"],
   },
 ];
 export const skills = [
