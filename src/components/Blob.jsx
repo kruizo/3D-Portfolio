@@ -8,7 +8,7 @@ const Blob = ({ position, color, width, height, filled }) => {
   const delayInSeconds = getRandomDelayInSeconds();
   return (
     <div
-      className={`blob  ${position} ${width} delay-${delayInSeconds} animate-spin delay ${height} border-${color} ${
+      className={`blob -z-50 ${position} ${width} delay-${delayInSeconds} animate-spin delay ${height} border-${color} ${
         filled ? `bg-${color}` : ""
       }`}
     ></div>

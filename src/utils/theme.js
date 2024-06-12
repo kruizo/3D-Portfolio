@@ -1,13 +1,11 @@
 window.onload = function () {
   const checkbox = document.querySelectorAll('.switch input[type="checkbox"]');
-  console.log("Checkbox:", checkbox);
 
   const userTheme = localStorage.getItem("theme");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   const checked = checkbox.forEach((check) => check.checked);
   const themeCheck = () => {
-    // checkbox.checked = true;
     if (userTheme === "dark" || (!userTheme && systemTheme) || checked) {
       document.documentElement.classList.add("dark");
       checkbox.forEach((check) => (check.checked = true));
@@ -15,7 +13,6 @@ window.onload = function () {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
     }
-    console.log(localStorage.getItem("theme"));
   };
 
   //manual
@@ -25,15 +22,16 @@ window.onload = function () {
 
       checkbox.forEach((check) => (check.checked = false));
       localStorage.setItem("theme", "light");
-      console.log("manual" + localStorage.getItem("theme"));
+      const themeChangeEvent = new Event("themeChange");
+      window.dispatchEvent(themeChangeEvent);
       return;
     }
 
     document.documentElement.classList.add("dark");
     localStorage.setItem("theme", "dark");
     checkbox.forEach((check) => (check.checked = true));
-
-    console.log(localStorage.getItem("theme"));
+    const themeChangeEvent = new Event("themeChange");
+    window.dispatchEvent(themeChangeEvent);
   };
 
   if (checkbox) {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ComputersCanvas from "./Computer";
+import ComputersCanvas from "./canvas/Computer";
 import useTypewriterAnimation from "../utils/type";
 import { fadeIn, textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
@@ -19,8 +19,8 @@ function About() {
   };
 
   return (
-    <section className="w-full h-full lg:min-h-screen flex flex-col justify-center mx-auto pt-24 lg:py-36 overflow-x-hidden">
-      <div className="block items-center h-full mx-16 justify-center xl:flex ">
+    <section className="w-full h-full lg:min-h-screen flex flex-col justify-center mx-auto overflow-x-hidden">
+      <div className="block items-center h-full p-6 md:mx-16 justify-center xl:flex">
         <motion.div
           className={`space-y-5 w-full lg:w-fit pr-0 sm:pr-24 xl:pr-0 xl:max-w-3xl xl:h-3/4 place-content-center ${
             activeSection === "about" ? "block" : "hidden"
@@ -33,7 +33,7 @@ function About() {
           transition={{ duration: 1 }}
         >
           <motion.div variants={textVariant()}>
-            <h1 className="font-bold text-[45px] sm:text-md lg:text-lg text-black dark:text-white ">
+            <h1 className="font-bold text-[40px] sm:text-md lg:text-lg text-black dark:text-white ">
               I create websites like this
               <span className="text-secondary">.</span>
               {/* Dream Big
@@ -46,7 +46,7 @@ function About() {
               <span className="text-secondary">.</span> */}
             </h1>
           </motion.div>
-          <p className="text-sm dark:text-slate-50 text-slate-800">
+          <p className="md:text-sm dark:text-slate-50 text-slate-800">
             I am Bob Kyneth Ruizo, specializing in JavaScript and TypeScript
             development. With expertise in web application and system creation,
             I leverage frameworks like Laravel and Next.js. My proficiency
@@ -82,8 +82,12 @@ function About() {
           }}
           transition={{ duration: 0.5 }}
         >
-          <canvas ref={canvasRef} id="canvas" className="absolute -z-20 " />
-          <div className="absolute w-full h-3/4 z-10">
+          <canvas
+            ref={canvasRef}
+            id="canvas"
+            className="absolute -z-20 w-3/4 mr-20 hidden md:block"
+          />
+          <div className="absolute w-full mt-6 md:mt-0 h-3/4 z-10">
             <ComputersCanvas />
           </div>
         </motion.div>
@@ -91,7 +95,7 @@ function About() {
 
       {activeSection === "certifications" && (
         <motion.div
-          className="w-full"
+          className="block items-center h-full -mt-12"
           initial={{ x: 1000, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}

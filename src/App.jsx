@@ -8,7 +8,7 @@ import {
   Hero,
   About,
 } from "./components/index";
-import StarsCanvas from "./components/Stars";
+import StarsCanvas from "./components/canvas/Stars";
 
 function App() {
   const wrapperRef = useRef(null);

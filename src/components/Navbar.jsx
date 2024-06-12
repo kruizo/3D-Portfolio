@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`top-nav fixed z-50 flex justify-between items-center ${padding} transition-all backdrop-blur-sm px-16  w-full duration-300 ${
+        className={`top-nav fixed z-50 flex justify-between items-center ${padding} transition-all backdrop-blur-sm p-6 md:px-16  w-full duration-300 ${
           showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
         }`}
       >

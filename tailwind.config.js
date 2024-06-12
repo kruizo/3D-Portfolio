@@ -14,6 +14,8 @@ export default {
         tertiary: "#222831",
         darken: "#1B2026",
         darker: "#14181C",
+        "slate-5": "#E8E7E7",
+        "slate-10": "#D7D7D7",
         "slate-50": "#C2C2C2",
         "slate-100": "#5b5b5b",
       },

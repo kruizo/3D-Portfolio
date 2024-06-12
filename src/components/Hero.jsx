@@ -6,7 +6,31 @@ const Hero = ({ scrollContainer }) => {
 
   return (
     <section>
-      <div className="hero p-5 h-screen sm:top-[16%] flex justify-center items-center z-30 relative">
+      <div className="hero p-5 h-screen sm:top-[16%] flex flex-col justify-center items-center z-30 relative">
+        <div className="flex justify-center">
+          <a
+            className="inline-flex items-center gap-x-2  text-[1rem] dark:text-slate-50 text-slate-800 p-1 ps-3 rounded-full transition"
+            href="#"
+          >
+            Full Stack Web Developer
+            <span className="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-muted-foreground/15 font-semibold text-sm">
+              <svg
+                className="flex-shrink-0 w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </span>
+          </a>
+        </div>
         <div className="absolute -z-20">
           <canvas ref={canvasRefLines} id="canvas"></canvas>
         </div>

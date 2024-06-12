@@ -24,13 +24,6 @@ function Skills() {
     <section className="relative w-full min-h-screen flex justify-center items-center px-16">
       <Blob
         color={"secondary"}
-        position={"right-[300px] -top-28"}
-        filled={true}
-        width={"w-[150px]"}
-        height={"h-[150px]"}
-      />
-      <Blob
-        color={"secondary"}
         variant={1}
         position={"right-[270px] -top-[130px]"}
         width={"w-[150px]"}
@@ -47,13 +40,13 @@ function Skills() {
         </div>
 
         <div className="z-50 w-full">
-          <div className="xl:block lg:pr-24 xl:pr-0 max-w-[60rem] lg:h-[10rem] lg:block">
+          <div className="xl:block md:pr-24 xl:pr-0 max-w-[60rem] lg:h-[10rem] lg:block">
             {hoveredCell != null ? (
-              <p className="tooltip text-sm dark:text-slate-200 text-slate-800 ">
+              <p className="md:text-sm dark:text-slate-50 text-slate-800">
                 {hoveredCell.description}
               </p>
             ) : (
-              <p className="text-sm dark:text-slate-200 text-slate-800 ">
+              <p className="md:text-sm dark:text-slate-50 text-slate-800">
                 I'm adept in HTML, CSS, and JavaScript, building strong
                 foundations for web projects. Utilizing React and Next.js, I
                 create sleek and interactive user interfaces. With Node.js and
@@ -76,7 +69,7 @@ function Skills() {
                   >
                     <motion.div
                       variants={fadeIn("right", "spring", 0.5 * index, 0.25)}
-                      className="cell bg-gray-200 relative z-50 "
+                      className="cell bg-gray-200 relative z-40 "
                     >
                       {hoveredCell && hoveredCell.name === skill.name ? (
                         <div className="progress-overlay text-center flex flex-col justify-center items-center w-20 h-20">

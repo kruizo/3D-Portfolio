@@ -1,4 +1,5 @@
 import * as image from "../assets/images/index.js";
+import * as project from "../assets/images/project/index.js";
 
 export const navLinks = [
   {
@@ -32,22 +33,33 @@ export const projects = [
     name: "Find AI",
     description: "Search for over 300+ AI's online.",
     url: "https://github.com/kruizo/find.ai",
+    image: [project.findai_home1, project.findai_home2, project.findai_content],
   },
   {
     name: "Artify",
     description: "A andriod art shop gallery made with flutter.",
     url: "https://github.com/kruizo/flutter-artshop-app",
+    image: [project.findai_home1, project.findai_home2],
   },
   {
     name: "MovieNext",
     description: "A movie rating platform with NextJS and IMDB API",
     url: "https://github.com/kruizo/MovieNext",
+    image: [project.next_home, project.next_home2],
   },
   {
     name: "Adelfor Station",
     description:
       "A sales and record tracking system for a water refilling station.",
     url: "https://github.com/kruizo/adelforstation",
+    image: [
+      project.adelfor_1,
+      project.adelfor_2,
+      project.adelfor_3,
+      project.adelfor_4,
+      project.adelfor_5,
+      project.adelfor_6,
+    ],
   },
 ];
 export const skills = [

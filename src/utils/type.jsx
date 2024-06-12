@@ -9,13 +9,18 @@ const useTypewriterAnimation = (
 
   const [localtheme, setLocalTheme] = useState(localStorage.getItem("theme"));
 
+  // In the useTypewriterAnimation hook
   useEffect(() => {
-    const handleStorageChange = () => {
+    const handleThemeChange = () => {
       setLocalTheme(localStorage.getItem("theme"));
+      console.log("New theme:", localtheme);
+      localStorage.getItem("theme", localtheme);
+      console.log(localStorage.getItem("theme"));
     };
 
-    window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
+    // Listen for the custom event
+    window.addEventListener("themeChange", handleThemeChange);
+    return () => window.removeEventListener("themeChange", handleThemeChange);
   }, []);
 
   useEffect(() => {
@@ -34,9 +39,9 @@ const useTypewriterAnimation = (
     const texts = [
       "Made with Three JS 🔥",
       "Design and be real. ",
-      "VIsit my github. 🚀⭐",
+      "VIsit my github.🚀⭐  ",
       "Reach me on my socials 📱",
-      "🔥🔥🔥🔥",
+      "🔥🔥🔥🔥 ",
       "Welcome 👋",
     ];
 
@@ -48,7 +53,7 @@ const useTypewriterAnimation = (
         this.text = text;
         this.x = x;
         this.y = y;
-        this.delay = delay; // Delay before starting to type
+        this.delay = delay; // Delay before start to type
         this.index = 0;
         this.opacity = 1;
         this.life = 0;
@@ -63,15 +68,14 @@ const useTypewriterAnimation = (
         ctx.fillStyle = isDark
           ? `rgba(255, 255, 255, ${this.opacity})`
           : `rgba(0, 0, 0, ${this.opacity})`;
-        ctx.font = "20px Courier New";
+        ctx.font = "25px Courier New";
         ctx.fillText(this.text.slice(0, this.index), this.x, this.y);
 
-        // Draw cursor at the end of the current text
+        //cursor
         if (this.started) {
           ctx.fillStyle = `rgba(255, 81, 47, ${this.opacity})`;
           if (this.cursorBlink % 60 < 30) {
-            // Cursor blink effect
-            ctx.fillRect(this.x + this.index * 12, this.y - 18, 10, 20); // Adjust the cursor position and size
+            ctx.fillRect(this.x + this.index * 15, this.y - 18, 10, 20);
           }
         }
       }
@@ -114,7 +118,6 @@ const useTypewriterAnimation = (
         this.x = x;
         this.y = y;
 
-        // Ensure the new text is unique
         let newText;
         do {
           newText = texts[Math.floor(Math.random() * texts.length)];
@@ -122,13 +125,13 @@ const useTypewriterAnimation = (
         this.text = newText;
         activeTexts.add(newText);
 
-        this.delay = Math.floor(Math.random() * 100); // Random delay before starting to type again
+        this.delay = Math.floor(Math.random() * 100);
       }
     }
 
     function getRandomPosition() {
-      const x = Math.random() * (canvas.width - 200); // 200 to prevent overflow
-      const y = Math.random() * (canvas.height - 50); // 50 to prevent overflow
+      const x = Math.random() * (canvas.width - 300);
+      const y = Math.random() * (canvas.height - 200);
       return { x, y };
     }
 
