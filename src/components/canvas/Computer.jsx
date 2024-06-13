@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
-import model from "../../assets/3d/computer/scene.gltf";
+import model from "/scene.gltf";
 
 const Computers = ({ scale }) => {
   const computer = useGLTF(model);

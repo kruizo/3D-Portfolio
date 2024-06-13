@@ -1,4 +1,6 @@
 import Position from "./Position";
+import React from "react";
+
 import useParticleAnimation from "../utils/draw";
 
 const Hero = ({ scrollContainer }) => {
