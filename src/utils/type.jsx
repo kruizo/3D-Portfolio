@@ -13,9 +13,7 @@ const useTypewriterAnimation = (
   useEffect(() => {
     const handleThemeChange = () => {
       setLocalTheme(localStorage.getItem("theme"));
-      console.log("New theme:", localtheme);
       localStorage.getItem("theme", localtheme);
-      console.log(localStorage.getItem("theme"));
     };
 
     // Listen for the custom event

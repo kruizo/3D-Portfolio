@@ -23,7 +23,6 @@ function Skills() {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
       setIsMobile(window.innerWidth <= 750);
     };
 

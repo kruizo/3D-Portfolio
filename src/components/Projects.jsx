@@ -12,9 +12,7 @@ function Projects() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log(currentImageIndex);
       if (hovered) {
-        console.log("asd");
         setCurrentImageIndex(Math.floor(Math.random() * hovered.image.length));
       }
     }, 2000);
