@@ -93,7 +93,7 @@ export const skills = [
     image: image.java,
     progress: 0.67,
     description:
-      "Capable of developing robust backend systems using Java for reliability and performance, leveraging frameworks like Spring Boot for rapid application development and dependency injection.",
+      "Capable of developing backend systems using Java for reliability and performance, leveraging frameworks like Spring Boot for rapid application development.",
   },
   {
     name: "Javascript",
@@ -114,7 +114,7 @@ export const skills = [
     image: image.next,
     progress: 0.535,
     description:
-      "Knowledgeable in leveraging Next.js features for server-side rendering and building optimized React applications, improving SEO and initial page load performance. Experienced in implementing data fetching strategies like server-side rendering and static site generation to enhance application performance and user experience.",
+      "Knowledgeable in leveraging Next.js features for server-side rendering and building optimized React applications. Experienced in implementing data fetching strategies like server-side rendering and static site generation to enhance application performance and user experience.",
   },
   {
     name: "NodeJS",
@@ -128,14 +128,14 @@ export const skills = [
     image: image.php,
     progress: 0.65,
     description:
-      "Proficient in developing server-side scripts and dynamic web applications using PHP for seamless integration with databases. Experienced in implementing PHP extensions like GD for image manipulation and processing. Leveraging frameworks such as Laravel for rapid and robust application development",
+      "Knowledgable in developing server-side scripts and dynamic web applications using PHP for seamless integration with databases. Experienced in implementing PHP extensions like GD for image manipulation and processing. Leveraging frameworks such as Laravel for rapid and robust application development",
   },
   {
     name: "Python",
     image: image.python,
     progress: 0.621,
     description:
-      "Skilled in utilizing Python's versatility for web development, data analysis, and automation tasks, leveraging frameworks like Django and Flask for building scalable and maintainable web applications. Experienced in working with libraries like NumPy and pandas for data manipulation and analysis in scientific computing and machine learning projects.",
+      "Skilled in utilizing Python's versatility for web development, and automation tasks, leveraging frameworks like Django for building scalable and maintainable web applications. Experienced in working with libraries like NumPy and pandas for data manipulation and analysis in scientific computing and machine learning projects.",
   },
   {
     name: "MySQL",
@@ -156,7 +156,7 @@ export const skills = [
     image: image.cs,
     progress: 0.4,
     description:
-      "Has experience  in developing desktop, web, and mobile applications with C# and the .NET framework, focusing on performance and scalability. My expertise includes optimizing algorithms and exploring scalable design patterns.",
+      "Has experience  in developing desktop, web, and mobile applications with C#, focusing on performance and scalability. My expertise includes optimizing algorithms and exploring scalable design patterns.",
   },
 ];
 
