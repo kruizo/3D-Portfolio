@@ -72,42 +72,42 @@ export const skills = [
     image: image.html,
     progress: 0.923,
     description:
-      "Proficient in crafting structured and semantic markup for web development projects, ensuring accessibility and search engine optimization. Experienced in utilizing HTML5 features and best practices to create modern and responsive web interfaces.",
+      "Proficient in crafting structured and semantic markup for web development projects. Experienced in utilizing HTML5 features and best practices to create modern and responsive web interfaces.",
   },
   {
     name: "CSS",
     image: image.css,
     progress: 0.76,
     description:
-      "Skilled in styling and layout design to create visually appealing and responsive user interfaces, using CSS preprocessors like Sass for efficient styling management. Experienced in implementing CSS frameworks such as Bootstrap to streamline development and ensure cross-browser compatibility.",
+      "Skilled in styling and layout design to create visually appealing and responsive user interfaces, using CSS preprocessors like Sass for efficient styling management. Experienced in implementing CSS frameworks such as Tailwind to streamline development and ensure cross-browser compatibility.",
   },
   {
     name: "React",
     image: image.react,
     progress: 0.6321,
     description:
-      "Experienced in building dynamic frontend applications with React.js for enhanced user experience, utilizing features like hooks and context API for state management and component composition. Proficient in optimizing React applications for performance and scalability using techniques like code splitting and lazy loading.",
+      "Experienced in building dynamic frontend applications with React.js for enhanced user experience, utilizing features like hooks, state management and component composition. Proficient in optimizing React applications for performance and scalability using techniques like code splitting and lazy loading.",
   },
   {
     name: "Java",
     image: image.java,
     progress: 0.67,
     description:
-      "Capable of developing robust backend systems using Java for reliability and performance, leveraging frameworks like Spring Boot for rapid application development and dependency injection. Experienced in building scalable and secure enterprise applications using Java EE technologies like Servlets and JSP.",
+      "Capable of developing robust backend systems using Java for reliability and performance, leveraging frameworks like Spring Boot for rapid application development and dependency injection.",
   },
   {
     name: "Javascript",
     image: image.js,
     progress: 0.753,
     description:
-      "Proficient in implementing client-side logic and dynamic behavior with JavaScript for engaging web applications, utilizing modern ES6+ features like arrow functions and destructuring. Experienced in working with JavaScript libraries and frameworks such as jQuery and Vue.js to simplify DOM manipulation and state management.",
+      "Proficient in implementing client-side logic and dynamic behavior with JavaScript for engaging web applications, utilizing modern ES6+ features like arrow functions and destructuring. Experienced in working with JavaScript libraries and frameworks such as jQuery and NextJS to simplify DOM manipulation and state management.",
   },
   {
     name: "Laravel",
     image: image.laravel,
     progress: 0.724,
     description:
-      "Skilled in developing efficient and maintainable PHP-based web applications using Laravel for code readability and elegance, utilizing features like Eloquent ORM for database interaction and Blade templating engine for dynamic content rendering. Experienced in building RESTful APIs and implementing authentication and authorization mechanisms using Laravel Passport.",
+      "Skilled in developing efficient and maintainable PHP-based web applications using Laravel for code readability and elegance, utilizing features like Blade templating engine for dynamic content rendering. Experienced in building RESTful APIs and implementing authentication and authorization mechanisms.",
   },
   {
     name: "Next",
@@ -128,10 +128,10 @@ export const skills = [
     image: image.php,
     progress: 0.65,
     description:
-      "Proficient in developing server-side scripts and dynamic web applications using PHP for seamless integration with databases, using frameworks like Symfony and CodeIgniter for MVC architecture and modular development. Experienced in implementing PHP extensions like GD for image manipulation and processing.",
+      "Proficient in developing server-side scripts and dynamic web applications using PHP for seamless integration with databases. Experienced in implementing PHP extensions like GD for image manipulation and processing. Leveraging frameworks such as Laravel for rapid and robust application development",
   },
   {
-    name: "Pythont",
+    name: "Python",
     image: image.python,
     progress: 0.621,
     description:
@@ -156,7 +156,7 @@ export const skills = [
     image: image.cs,
     progress: 0.4,
     description:
-      "Skilled in developing desktop, web, and mobile applications with C# and the .NET framework, focusing on performance and scalability. Experienced in building cross-platform applications using Xamarin.Forms and ASP.NET Core for seamless development across different platforms and devices.",
+      "Has experience  in developing desktop, web, and mobile applications with C# and the .NET framework, focusing on performance and scalability. My expertise includes optimizing algorithms and exploring scalable design patterns.",
   },
 ];
 
