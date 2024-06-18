@@ -15,7 +15,7 @@ function App() {
   const wrapperRef = useRef(null);
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "/src/utils/theme.js";
+    script.src = "/theme.js";
     script.async = true;
     document.body.appendChild(script);
 
