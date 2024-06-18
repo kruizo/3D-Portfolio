@@ -56,8 +56,8 @@ function Certifications({ onGoBack }) {
         onClick={onGoBack}
       >
         <svg
-          clip-rule="evenodd"
-          fill-rule="evenodd"
+          clipRule="evenodd"
+          fillRule="evenodd"
           stroke-linejoin="round"
           stroke-miterlimit="2"
           viewBox="0 0 24 24"

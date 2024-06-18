@@ -106,7 +106,7 @@ function Skills() {
 
           <div className={` honeycomb ${isMobile ? "hidden" : "nlock"}`}>
             {honeycombRows.map((row, rowIndex) => (
-              <div key={rowIndex} cl>
+              <div key={rowIndex}>
                 {row.map((skill, index) => (
                   <Tilt
                     options={{ scale: 1.1, max: 60 }}

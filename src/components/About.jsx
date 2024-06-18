@@ -55,12 +55,15 @@ function About() {
             HTML/CSS, I bring a comprehensive skill set to every project.
           </p>
           <div className="flex gap-4 py-5 my-5">
-            <button
-              type="button"
-              className="bg-secondary z-20 text-slate-10 dark:text-white hover:text-black hover:dark:text-black transition-colors hover:bg-white py-3 px-5"
-            >
-              Download Resume
-            </button>
+            <a href="/resume.pdf">
+              <button
+                type="button"
+                className="bg-secondary z-20 text-slate-10 dark:text-white hover:text-black hover:dark:text-black transition-colors hover:bg-white py-3 px-5"
+              >
+                Download Resume
+              </button>
+            </a>
+
             <button
               type="button"
               className="border z-50 border-black dark:border-white py-3 px-5 hover text-black dark:text-white hover:dark:border-secondary dark:hover:text-secondary transition-colors hover:text-secondary hover:border-secondary"
