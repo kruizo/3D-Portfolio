@@ -1,4 +1,4 @@
-window.onload = function () {
+  
   const checkbox = document.querySelectorAll('.switch input[type="checkbox"]');
 
   const userTheme = localStorage.getItem("theme");
@@ -17,6 +17,7 @@ window.onload = function () {
 
   //manual
   const themeSwitch = () => {
+    
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
 
@@ -36,7 +37,8 @@ window.onload = function () {
 
   if (checkbox) {
     checkbox.forEach((check) => check.addEventListener("change", themeSwitch));
+   
+
   }
 
   themeCheck();
-};
