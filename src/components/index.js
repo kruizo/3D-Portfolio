@@ -8,8 +8,11 @@ import Skills from "./Skills.jsx";
 import Certifications from "./Certifications.jsx";
 import Awards from "./Awards.jsx";
 import Blob from "./Blob.jsx";
+import Footer from "./Footer.jsx";
+
 export {
   Blob,
+  Footer,
   Contact,
   Awards,
   Navbar,

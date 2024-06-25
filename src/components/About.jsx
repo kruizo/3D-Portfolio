@@ -33,7 +33,7 @@ function About() {
           transition={{ duration: 1 }}
         >
           <motion.div variants={textVariant()}>
-            <h1 className="font-bold text-[40px] spacing sm:text-md lg:text-md  text-black dark:text-white ">
+            <h1 className="font-bold spacing text-[45px] sm:text-md lg:text-lg  text-black dark:text-white ">
               {/* I create websites like this
               <span className="text-secondary">.</span> */}
               Designer<span className="text-secondary">. </span> Developer

@@ -63,15 +63,15 @@ const Contact = () => {
 
   return (
     <section
-      className={`py-12 relativeflex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      className={`relativeflex h-full lg:min-h-screen xl:flex-row flex-col-reverse gap-10 overflow-hidden `}
     >
       <motion.div
         variants={textVariant()}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl pb-12"
+        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
         <div className=" text-center">
           <p className="font-light font-mono text-black dark:text-white">
-            Get in touch
+            Let's work together
           </p>
           <h1 className="font-bold text-[45px] sm:text-md lg:text-lg text-black dark:text-white ">
             Contact
@@ -96,7 +96,7 @@ const Contact = () => {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="What's your name?"
-                  className="bg-slate-10 dark:bg-tertiary py-4 px-6 placeholder:text-slate-50 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium"
+                  className="bg-slate-10 dark:bg-tertiary py-4 px-6 placeholder:text-slate-100 dark:placeholder:text-slate-100 text-black dark:text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>
               <label className="flex flex-col">
@@ -109,7 +109,7 @@ const Contact = () => {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="What's your web address?"
-                  className="bg-slate-10 dark:bg-tertiary py-4 px-6 placeholder:text-slate-50 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium"
+                  className="bg-slate-10 dark:bg-tertiary py-4 px-6 placeholder:text-slate-100 dark:placeholder:text-slate-100 text-black dark:text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>
               <label className="flex flex-col">
@@ -122,13 +122,13 @@ const Contact = () => {
                   value={form.message}
                   onChange={handleChange}
                   placeholder="What you want to say?"
-                  className="bg-slate-10 dark:bg-tertiary py-4 px-6 placeholder:text-slate-50 dark:placeholder:text-secondary text-black dark:text-white rounded-lg outline-none border-none font-medium"
+                  className="bg-slate-10 dark:bg-darker py-4 px-6 placeholder:text-slate-100 dark:placeholder:text-slate-100 text-black dark:text-white rounded-lg outline-none border-none font-medium"
                 />
               </label>
 
               <button
                 type="submit"
-                className="bg-slate-5 dark:bg-tertiary py-3 px-4 rounded-xl outline-none w-fit text-secondary dark:text-secondary font-bold shadow-primary"
+                className="bg-slate-5 dark:bg-tertiary py-3 px-4 rounded-xl outline-none w-fit text-secondary font-bold shadow-primary"
               >
                 {loading ? "Sending..." : "Send"}
               </button>

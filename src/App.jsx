@@ -8,6 +8,7 @@ import {
   Skills,
   Hero,
   About,
+  Footer,
   Awards,
 } from "./components/index";
 import StarsCanvas from "./components/canvas/Stars";
@@ -30,7 +31,7 @@ function App() {
       <div className={`main z-0 bg-white dark:bg-primary`}>
         <Navbar />
         <div className="wrapper" ref={wrapperRef}>
-          <div id="hero" className="z-20">
+          <div id="hero" className="z-30">
             <Hero scrollContainer={wrapperRef} />
           </div>
         </div>
@@ -50,6 +51,9 @@ function App() {
           </div>
           <div id="contact" className="relative z-30 ">
             <Contact />
+          </div>
+          <div className="relative z-30 ">
+            <Footer />
           </div>
         </div>
       </div>

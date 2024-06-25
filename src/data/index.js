@@ -32,6 +32,8 @@ export const navLinks = [
 export const projects = [
   {
     name: "Find AI",
+    tags: ["Web Development", "Systems"],
+
     description: "Search for over 300+ AI's online.",
     url: "https://github.com/kruizo/find.ai",
     image: [project.findai_home1, project.findai_home2, project.findai_content],
@@ -39,6 +41,7 @@ export const projects = [
   },
   {
     name: "Artify",
+    tags: ["Andriod", "Systems"],
     description: "A andriod art shop gallery made with flutter.",
     url: "https://github.com/kruizo/flutter-artshop-app",
     image: [project.artify_home],
@@ -46,6 +49,7 @@ export const projects = [
   },
   {
     name: "MovieNext",
+    tags: ["Web Development", "Designs"],
     description: "A movie rating platform with NextJS and IMDB API",
     url: "https://github.com/kruizo/MovieNext",
     image: [project.next_home, project.next_home2],
@@ -53,6 +57,7 @@ export const projects = [
   },
   {
     name: "Adelfor Station",
+    tags: ["Web Development", "Systems"],
     description:
       "A sales and record tracking system for a water refilling station.",
     url: "https://github.com/kruizo/adelforstation",
