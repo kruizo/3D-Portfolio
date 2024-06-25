@@ -8,6 +8,7 @@ import {
   Skills,
   Hero,
   About,
+  Awards,
 } from "./components/index";
 import StarsCanvas from "./components/canvas/Stars";
 
@@ -44,7 +45,9 @@ function App() {
           <div id="projects" className="relative z-30 ">
             <Projects />
           </div>
-
+          <div id="awards" className="relative z-30 ">
+            <Awards />
+          </div>
           <div id="contact" className="relative z-30 ">
             <Contact />
           </div>

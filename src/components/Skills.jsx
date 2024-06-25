@@ -35,15 +35,8 @@ function Skills() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center p-6">
-      <Blob
-        color={"secondary"}
-        variant={1}
-        position={"right-[270px] -top-[130px]"}
-        width={"w-[150px]"}
-        height={"h-[150px]"}
-      />
-      <div className="space-y-5 w-full lg:w-fit pr-0 sm:pr-24 xl:pr-0 xl:w-1/2">
+    <section className="w-full min-h-screen flex justify-center items-center p-10 lg:pr-20">
+      <div className="space-y-5 w-full lg:w-fit pr-0 sm:pr-24 xl:pr-0 xl:w-3/4">
         <div className="mb-10">
           <motion.div variants={textVariant()}>
             <h1 className="text-lg xl:text-center font-bold text-black dark:text-white ">
@@ -53,14 +46,14 @@ function Skills() {
           </motion.div>
         </div>
 
-        <div className="z-50 w-full">
-          <div className="pr-0 lg:pr-16 xl:pr-0 w-full h-[10rem] md:h-[15rem] lg:block">
+        <div className="z-50 w-full ">
+          <div className="pr-0 text-[1rem]  xl:pr-0 w-full h-[10rem]  md:h-[8rem] lg:block">
             {hoveredCell != null ? (
-              <p className="md:text-sm pr-0 lg:pr-16 dark:text-slate-50 text-slate-800">
+              <p className="pr-0 dark:text-slate-50 text-slate-800">
                 {hoveredCell.description}
               </p>
             ) : (
-              <p className="md:text-sm dark:text-slate-50 text-slate-800">
+              <p className="dark:text-slate-50 text-slate-800">
                 I'm adept in HTML, CSS, and JavaScript, building strong
                 foundations for web projects. Utilizing React and Next.js, I
                 create sleek and interactive user interfaces. With Node.js and
@@ -72,7 +65,7 @@ function Skills() {
             )}
           </div>
           {isMobile && (
-            <div className="flex mt-20 flex-wrap gap-5 w-full">
+            <div className="flex mt-16 flex-wrap gap-5 w-full ">
               {skills.map((skill, index) => (
                 <div key={index} className="w-full">
                   <Tilt
@@ -104,7 +97,7 @@ function Skills() {
             </div>
           )}
 
-          <div className={` honeycomb ${isMobile ? "hidden" : "nlock"}`}>
+          <div className={` honeycomb  ${isMobile ? "hidden" : "nlock"}`}>
             {honeycombRows.map((row, rowIndex) => (
               <div key={rowIndex}>
                 {row.map((skill, index) => (

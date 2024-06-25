@@ -110,7 +110,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <nav className="w-fit hidden sm:block right-0 fixed h-full backdrop-blur-none xl:backdrop-blur-sm items-center bg-gradient-to-b sm:bg-none sm:py-10 z-40 px-16">
+      <nav className="w-fit hidden sm:block right-0 fixed h-full items-center bg-gradient-to-b sm:bg-none sm:py-10 z-40 px-16">
         <div className="w-full flex justify-between items-start mx-auto">
           <NavLink
             to="/"

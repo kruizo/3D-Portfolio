@@ -2,21 +2,19 @@ import { useEffect, useRef, useState } from "react";
 
 const useTypewriterAnimation = (
   maxTexts = 1,
-  textDuration = 300,
-  typingSpeed = 10
+  textDuration = 250,
+  typingSpeed = 2
 ) => {
   const canvasRef = useRef(null);
 
   const [localtheme, setLocalTheme] = useState(localStorage.getItem("theme"));
 
-  // In the useTypewriterAnimation hook
   useEffect(() => {
     const handleThemeChange = () => {
       setLocalTheme(localStorage.getItem("theme"));
       localStorage.getItem("theme", localtheme);
     };
 
-    // Listen for the custom event
     window.addEventListener("themeChange", handleThemeChange);
     return () => window.removeEventListener("themeChange", handleThemeChange);
   }, []);

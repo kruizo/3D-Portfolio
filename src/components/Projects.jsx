@@ -21,13 +21,7 @@ function Projects() {
   }, [hovered]);
 
   return (
-    <section className="relative">
-      <Blob
-        color={"secondary"}
-        position={"-left-[60px] -top-40"}
-        width={"w-[200px]"}
-        height={"h-[200px]"}
-      />
+    <section>
       <div className="min-h-screen flex flex-col gap-4 md:justify-center md:items-center p-6">
         <motion.div variants={textVariant()}>
           <h1 className="font-bold text-[45px] sm:text-md lg:text-lg text-black dark:text-white mb-8">

@@ -37,7 +37,7 @@ const Position = () => {
           aria-label="aspiring developer"
         >
           {produceSpans(
-            "aspiring developer",
+            "web developer",
             "animate-textRotate2",
             "text-[#ff512f]"
           )}
