@@ -1,5 +1,5 @@
 import React from "react";
-import { htmlcss_badge, database_badge } from "../assets/images";
+import { htmlcss_badge } from "../assets/images";
 
 function Certifications({ onGoBack }) {
   return (

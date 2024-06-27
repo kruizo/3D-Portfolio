@@ -8,11 +8,13 @@ import Skills from "./Skills.jsx";
 import Certifications from "./Certifications.jsx";
 import Blob from "./Blob.jsx";
 import Footer from "./Footer.jsx";
+import ProjectCard from "./ProjectCard.jsx";
 
 export {
   Blob,
   Footer,
   Contact,
+  ProjectCard,
   Navbar,
   Experience,
   Hero,

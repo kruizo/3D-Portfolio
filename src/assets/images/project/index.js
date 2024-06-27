@@ -9,11 +9,17 @@ import adelfor_3 from "./adelfor_other3.png";
 import adelfor_4 from "./adelfor_other4.png";
 import adelfor_5 from "./adelfor_other5.png";
 import adelfor_6 from "./adelfor_other6.png";
-import artify_home from "./img1.png";
+import artify_home from "./artify_home.png";
+import artify_2 from "./artify_2.png";
+import artify_3 from "./artify_3.png";
+import artify_4 from "./artify_4.png";
 
 export {
   findai_content,
   artify_home,
+  artify_2,
+  artify_3,
+  artify_4,
   findai_home1,
   findai_home2,
   next_home,

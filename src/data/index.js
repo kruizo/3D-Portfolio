@@ -33,15 +33,21 @@ export const projects = [
     description: "Search for over 300+ AI's online.",
     url: "https://github.com/kruizo/find.ai",
     image: [project.findai_home1, project.findai_home2, project.findai_content],
-    text: ["react", "vite", "tailwind", "javascript", "shadcn"],
+    // text: ["react", "vite", "tailwind", "javascript", "shadcn"],
+    text: [image.tailwind, image.react, image.js, image.nodejs],
   },
   {
     name: "Artify",
     tags: ["Andriod", "Systems"],
     description: "A andriod art shop gallery made with flutter.",
     url: "https://github.com/kruizo/flutter-artshop-app",
-    image: [project.artify_home],
-    text: ["firebase", "dart", "flutter"],
+    image: [
+      project.artify_home,
+      project.artify_2,
+      project.artify_3,
+      project.artify_4,
+    ],
+    text: [image.dart, image.flutter, image.firebase],
   },
   {
     name: "MovieNext",
@@ -49,7 +55,13 @@ export const projects = [
     description: "A movie rating platform with NextJS and IMDB API",
     url: "https://github.com/kruizo/MovieNext",
     image: [project.next_home, project.next_home2],
-    text: ["IMDB", "API", "typescript", "nextJS"],
+    text: [
+      image.tailwind,
+      image.typescript,
+      image.next,
+      image.js,
+      image.nodejs,
+    ],
   },
   {
     name: "Adelfor Station",
@@ -65,7 +77,7 @@ export const projects = [
       project.adelfor_5,
       project.adelfor_6,
     ],
-    text: ["laravel", "PHP", "composer", "XAMPP", "SQL", "Auth"],
+    text: [image.php, image.laravel, image.xampp, image.sql],
   },
 ];
 export const skills = [

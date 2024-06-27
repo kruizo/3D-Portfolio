@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const HexagonalProgress = ({ progress }) => {
-  const sideLength = 50; // Length of each side of the hexagon
-  const height = Math.sqrt(3) * sideLength * 2; // Height of the hexagon
-  const width = sideLength * 2; // Width of the hexagon
-  const perimeter = 6 * sideLength; // Calculate the perimeter of the hexagon
+  const sideLength = 50; 
+  const height = Math.sqrt(3) * sideLength * 2; 
+  const width = sideLength * 2; 
+  const perimeter = 6 * sideLength; 
 
   const [progressValue, setProgress] = useState(0);
 
@@ -14,7 +14,7 @@ const HexagonalProgress = ({ progress }) => {
 
     const animate = () => {
       if (currentProgress < progress) {
-        currentProgress += 0.01; // Adjust the speed of animation by changing this value
+        currentProgress += 0.01; 
         setProgress(currentProgress);
         animationFrameId = requestAnimationFrame(animate);
       }

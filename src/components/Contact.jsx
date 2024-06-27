@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 import emailjs from "@emailjs/browser";
 import { fadeIn, textVariant } from "../utils/motion";
 

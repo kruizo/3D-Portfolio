@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ComputersCanvas from "./canvas/Computer";
 import useTypewriterAnimation from "../utils/type";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
 import Certifications from "./Certifications";

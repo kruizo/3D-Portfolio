@@ -5,7 +5,6 @@ import { MotionWrapper } from "../hoc";
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import { fadeIn, textVariant } from "../utils/motion";
-import Blob from "./Blob";
 
 function Skills() {
   const columns = [4, 5, 4];

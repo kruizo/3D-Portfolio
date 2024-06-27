@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import close from "../assets/close.svg";
 import menu from "../assets/menu.svg";
 import { navLinks } from "../data";

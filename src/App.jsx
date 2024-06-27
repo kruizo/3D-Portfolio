@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import {
   Contact,
   Navbar,

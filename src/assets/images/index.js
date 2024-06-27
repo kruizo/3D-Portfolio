@@ -14,9 +14,22 @@ import cs from "./cs.png";
 import database_badge from "./databasebadge.png";
 import htmlcss_badge from "./htmlcssbadge.png";
 import placeholder from "./images.jpg";
+import tailwind from "./tailwind.png";
+import vite from "./vite.png";
+import flutter from "./flutter.png";
+import xampp from "./xampp.png";
+import typescript from "./typescript.png";
+import dart from "./dart.png";
 export {
   css,
+  typescript,
+  vite,
+  sql,
+  xampp,
+  dart,
+  flutter,
   html,
+  tailwind,
   java,
   js,
   laravel,
@@ -25,7 +38,6 @@ export {
   php,
   python,
   react,
-  sql,
   firebase,
   cs,
   database_badge,
