@@ -63,13 +63,13 @@ const Contact = () => {
 
   return (
     <section
-      className={`relativeflex h-full lg:min-h-screen xl:flex-row flex-col-reverse gap-10 overflow-hidden `}
+      className={`relative flex flex-col h-full lg:min-h-screen overflow-hidden `}
     >
       <motion.div
         variants={textVariant()}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] h-full flex justify-center flex-col lg:min-h-screen bg-black-100 p-8 rounded-2xl"
       >
-        <div className=" text-center">
+        <div className="text-center">
           <p className="font-light font-mono text-black dark:text-white">
             Let's work together
           </p>
@@ -136,11 +136,6 @@ const Contact = () => {
           </div>
         </div>
       </motion.div>
-
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      ></motion.div>
     </section>
   );
 };
