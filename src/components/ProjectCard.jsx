@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { MotionWrapper } from "../hoc";
 
 function ProjectCard({ title, desc, images, link, lang, showProject, index }) {
   const [hovered, setHovered] = useState(null);
@@ -63,14 +62,6 @@ function ProjectCard({ title, desc, images, link, lang, showProject, index }) {
             >
               <h1 className="font-extrabold text-sm">{title}</h1>
 
-              {/* <a
-                href={link}
-                className="font-thin text-[1rem] md:text-[.8rem] text-slate-50 text-ellipsis"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {link}
-              </a> */}
               <p
                 className={`font-thin text-[1rem]  text-slate-50 text-ellipsis`}
               >

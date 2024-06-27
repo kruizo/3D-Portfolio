@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
 import emailjs from "@emailjs/browser";
-import { fadeIn, textVariant } from "../utils/motion";
+import { textVariant } from "../utils/motion";
 
 const Contact = () => {
   const formRef = useRef();
