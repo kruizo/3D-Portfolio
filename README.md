@@ -13,7 +13,7 @@ Welcome to my portfolio! This project showcases my work using Three.js and React
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/kruizo/3D-Portfolio.git
    ```
 1. Navigate to the project directory:
    ```bash
@@ -37,7 +37,7 @@ Welcome to my portfolio! This project showcases my work using Three.js and React
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/kruizo/image-to-text-extension/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/kruizo/3D-Portfolio/issues).
 
 ## 📧 Contact
 
