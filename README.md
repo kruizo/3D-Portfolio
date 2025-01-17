@@ -1,8 +1,48 @@
-# React + Vite
+# 🌟 3D Portfolio with Three.js and React 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio! This project showcases my work using Three.js and React to create stunning 3D visualizations.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive 3D models 🖼️
+- Smooth animations 🎞️
+- Responsive design 📱
+- Easy navigation 🧭
+
+## 🛠️ Setup and Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+1. Navigate to the project directory:
+   ```bash
+    cd your-repo-name
+   ```
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+1. Start the development server:
+   ```bash
+    npm start
+   ```
+
+## 🧰 Technologies Used
+
+- React ⚛️
+- Three.js 🌐
+- JavaScript 🟨
+- CSS 🎨
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/kruizo/image-to-text-extension/issues).
+
+## 📧 Contact
+
+If you have any questions or suggestions, feel free to reach out to me at [kynethruizo@gmail.com](mailto:kynethruizo@gmail.com).
+
+---
+
+Made by [kruizo](https://github.com/kruizo)
