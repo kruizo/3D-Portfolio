@@ -1,8 +1,9 @@
-import Position from "./Position";
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import Position from "./Position";
 import useParticleAnimation from "../utils/draw";
 
-const Hero = ({ scrollContainer }) => {
+const Hero = () => {
   const canvasRefLines = useParticleAnimation();
   const [hovered, setHovered] = useState(false);
 
@@ -26,7 +27,7 @@ const Hero = ({ scrollContainer }) => {
                 hovered ? "text-secondary" : ""
               }`}
             >
-              <span class={`mx-auto [&>svg]:h-5 [&>svg]:w-5 `}>
+              <span className={`mx-auto [&>svg]:h-5 [&>svg]:w-5 `}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

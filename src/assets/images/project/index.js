@@ -35,9 +35,13 @@ import ad2 from "./ad2.png";
 import it1 from "./it1.png";
 import it2 from "./it2.png";
 import it3 from "./it3.png";
+import b1 from "./b1.png";
+import b2 from "./b2.png";
 
 export {
   findai_content,
+  b1,
+  b2,
   i1,
   d1,
   d2,

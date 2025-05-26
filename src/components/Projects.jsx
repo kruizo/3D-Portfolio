@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { projects } from "../data";
 import { textVariant } from "../utils/motion";
@@ -29,7 +30,7 @@ function Projects() {
 
   return (
     <section>
-      <div className="min-h-screen flex flex-col gap-10 md:justify-center md:items-center p-6">
+      <div className="min-h-screen flex flex-col gap-10 md:justify-center md:items-center p-6 sm:pr-36 md:pr-20">
         <motion.div variants={textVariant()}>
           <h1 className="font-bold text-[45px] sm:text-md lg:text-lg text-black dark:text-white">
             Projects

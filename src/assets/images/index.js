@@ -20,7 +20,26 @@ import flutter from "./flutter.png";
 import xampp from "./xampp.png";
 import typescript from "./typescript.png";
 import dart from "./dart.png";
+import express from "./express.png";
+import mongo from "./mongo.png";
+import docker from "./docker.png";
+import ejs from "./ejs.png";
+import flask from "./flask.png";
+import htmx from "./htmx.png";
+import nginx from "./nginx.png";
+import vue from "./vue.png";
+import astro from "./astro.png";
+
 export {
+  express,
+  mongo,
+  docker,
+  ejs,
+  flask,
+  htmx,
+  nginx,
+  vue,
+  astro,
   css,
   typescript,
   vite,

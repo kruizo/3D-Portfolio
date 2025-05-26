@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
@@ -70,7 +71,7 @@ const Contact = () => {
       >
         <div className="text-center">
           <p className="font-light font-mono text-black dark:text-white">
-            Let's work together
+            Let&apos;s work together
           </p>
           <h1 className="font-bold text-[45px] sm:text-md lg:text-lg text-black dark:text-white ">
             Contact
