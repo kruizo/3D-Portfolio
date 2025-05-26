@@ -20,7 +20,7 @@ const Hero = ({ scrollContainer }) => {
             alt="Github Link"
             className="inline-flex items-center gap-x-2 text-[1rem] dark:text-slate-50 text-slate-800 p-1 ps-3 rounded-full transition"
           >
-            Full Stack Web Developer
+            Full Stack Developer
             <span
               className={`py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-muted-foreground/15 font-semibold text-sm ${
                 hovered ? "text-secondary" : ""
@@ -57,7 +57,7 @@ const Hero = ({ scrollContainer }) => {
         </div>
         <div className="lg:mb-20">
           <h1 className="text-start font-medium text-black  dark:text-white text-lg xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-xl leading-[110px] 2xl:leading-[160px]">
-            Hi, I'm Ken<span className="text-secondary">.</span>
+            Hi, Im Ken<span className="text-secondary">.</span>
           </h1>
           <Position />
         </div>

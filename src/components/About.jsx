@@ -50,8 +50,9 @@ function About() {
             </h1>
           </motion.div>
           <p className="md:text-[1rem] dark:text-slate-50 text-slate-800">
-            I am Bob Kyneth Ruizo, specializing in JavaScript and TypeScript
-            development. With expertise in web application and system creation,
+            I am Bob Kyneth Ruizo, a full stack developer specializing in both
+            software & web development with strong focus towards backend
+            engineering. With expertise in web application and system creation,
             I leverage frameworks like Laravel and Next.js. My proficiency
             extends to various databases such as MySQL, Firebase, and MongoDB.
             As an ITS-certified professional in database management and

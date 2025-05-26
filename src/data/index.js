@@ -27,19 +27,84 @@ export const navLinks = [
 
 export const projects = [
   {
+    name: "CineRanker",
+    tags: ["Web Development", "Designs"],
+    description: "A movie rating platform with NextJS and TMDB API",
+    url: "https://github.com/kruizo/cine-ranker-tmdb",
+    image: [project.r1, project.r2, project.r3, project.r4],
+    text: [
+      image.tailwind,
+      image.typescript,
+      image.next,
+      image.js,
+      image.nodejs,
+    ],
+  },
+  {
     name: "Find AI",
     tags: ["Web Development", "Systems"],
 
-    description: "Search for over 300+ AI's online.",
-    url: "https://github.com/kruizo/find.ai",
+    description: "A web search UI template with React",
+    url: "https://github.com/kruizo/find-ai",
     image: [project.findai_home1, project.findai_home2, project.findai_content],
     // text: ["react", "vite", "tailwind", "javascript", "shadcn"],
     text: [image.tailwind, image.react, image.js, image.nodejs],
   },
   {
+    name: " E-commerce Management System",
+    tags: ["Web Development", "Systems"],
+    description:
+      "A sales and record tracking system for a water refilling station.",
+    url: "https://github.com/kruizo/sales-record-sys",
+    image: [
+      project.adelfor_1,
+      project.adelfor_2,
+      project.adelfor_3,
+      project.ad1,
+      project.ad2,
+      project.adelfor_4,
+    ],
+    text: [image.php, image.laravel, image.xampp, image.sql],
+  },
+  {
+    name: "FishNet+",
+    tags: ["Web Development", "Systems"],
+    description:
+      "Fish Specie Recognition System with Machine Learning using Python and Flask",
+    url: "https://github.com/kruizo/fish-specie-recognition",
+    image: [project.f1, project.f2, project.f3, project.f4, project.f5],
+    text: [image.dart, image.flutter, image.firebase],
+  },
+  {
+    name: "Astro Blog",
+    tags: ["Web Development"],
+    description: "A simple blog made with Astro & Vue.",
+    url: "https://github.com/kruizo/blog-astro-vue",
+    image: [project.f1, project.f2, project.f3, project.f4, project.f5],
+    text: [image.dart, image.flutter, image.firebase],
+  },
+  {
+    name: "Global Chat App",
+    tags: ["Web Development, System"],
+    description:
+      "A dockerized global chat app made with NGINX, ExpressJS, React, and Socket.IO.",
+    url: "https://github.com/kruizo/wgl-chat-app",
+    image: [project.i1],
+    text: [image.dart, image.flutter, image.firebase],
+  },
+  {
+    name: "Dynaform",
+    tags: ["Web Development", "Systems"],
+    description:
+      "A interactive form builder with drag-and-drop, collaboritive editing, built with HTMX, MongoDB, and Node.js.",
+    url: "https://github.com/kruizo/DynaForm",
+    image: [project.d1, project.d2, project.d3, project.d4],
+    text: [image.dart, image.flutter, image.firebase],
+  },
+  {
     name: "Artify",
     tags: ["Andriod", "Systems"],
-    description: "A andriod art shop gallery made with flutter.",
+    description: "A andriod art shop gallery made with Flutter and Firebase.",
     url: "https://github.com/kruizo/flutter-artshop-app",
     image: [
       project.artify_home,
@@ -50,34 +115,21 @@ export const projects = [
     text: [image.dart, image.flutter, image.firebase],
   },
   {
-    name: "MovieNext",
-    tags: ["Web Development", "Designs"],
-    description: "A movie rating platform with NextJS and IMDB API",
-    url: "https://github.com/kruizo/MovieNext",
-    image: [project.next_home, project.next_home2],
-    text: [
-      image.tailwind,
-      image.typescript,
-      image.next,
-      image.js,
-      image.nodejs,
-    ],
-  },
-  {
-    name: "Adelfor Station",
+    name: "Frepo",
     tags: ["Web Development", "Systems"],
     description:
-      "A sales and record tracking system for a water refilling station.",
-    url: "https://github.com/kruizo/adelforstation",
-    image: [
-      project.adelfor_1,
-      project.adelfor_2,
-      project.adelfor_3,
-      project.adelfor_4,
-      project.adelfor_5,
-      project.adelfor_6,
-    ],
-    text: [image.php, image.laravel, image.xampp, image.sql],
+      "Fast-Repo - instant creation and deletion of GitHub repositories.",
+    url: "https://github.com/kruizo/frepo",
+    image: [project.fr1, project.fr2, project.fr3, project.fr4],
+    text: [image.dart, image.flutter, image.firebase],
+  },
+  {
+    name: "Image to Text Extention",
+    tags: ["Web Development", "Systems"],
+    description: "A simple integration of Teserract OCR to a Chrome extention",
+    url: "https://github.com/kruizo/imagae-to-text-ext",
+    image: [project.it1, project.it2, project.it3],
+    text: [image.dart, image.flutter, image.firebase],
   },
 ];
 export const skills = [
