@@ -59,11 +59,7 @@ function About() {
             HTML/CSS, I bring a comprehensive skill set to every project.
           </p>
           <div className="flex gap-4 py-5 my-5 ">
-            <a
-              href="https://drive.google.com/file/d/1qUeyQUyuORjoDjgtpnh9Nah_AFbVtLhB/view?usp=sharing"
-              target="_blank"
-              className="z-50"
-            >
+            <a href="../assets/Resume.pdf" download className="z-50">
               <button
                 type="button"
                 className="bg-secondary z-50 text-slate-10 dark:text-white hover:text-black hover:dark:text-black transition-colors hover:bg-white py-3 px-5"
