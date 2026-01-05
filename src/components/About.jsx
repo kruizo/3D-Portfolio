@@ -34,19 +34,11 @@ function About() {
         >
           <motion.div variants={textVariant()}>
             <h1 className="font-bold spacing text-[45px] sm:text-md lg:text-lg  text-black dark:text-white ">
-              {/* I create websites like this
-              <span className="text-secondary">.</span> */}
               Designer<span className="text-secondary">. </span> Developer
               <span className="text-secondary">. </span>
               <br /> Innovator
               <span className="text-secondary">. </span>
               Thinker<span className="text-secondary">. </span>
-              {/* <br />
-              Developer
-              <span className="text-secondary">.</span>
-              <br />
-              Innovator
-              <span className="text-secondary">.</span> */}
             </h1>
           </motion.div>
           <p className="md:text-[1rem] dark:text-slate-50 text-slate-800">
