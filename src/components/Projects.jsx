@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { projects } from "../data";
 import { textVariant } from "../utils/motion";

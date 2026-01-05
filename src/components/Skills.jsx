@@ -53,13 +53,13 @@ function Skills() {
               </p>
             ) : (
               <p className="dark:text-slate-50 text-slate-800">
-                I'm adept in HTML, CSS, and JavaScript, building strong
-                foundations for web projects. Utilizing React and Next.js, I
-                create sleek and interactive user interfaces. With Node.js and
-                MySQL, I handle backend operations seamlessly. Additionally, I
-                excel in Firebase for real-time database management and
-                deployment. My focus on user experience and innovation ensures
-                that each project meets high standards and exceeds expectations.
+                Adept in HTML, CSS, and JavaScript, building strong foundations
+                for web projects. Utilizing React and Next.js, I create sleek
+                and interactive user interfaces. With Node.js and MySQL, I
+                handle backend operations seamlessly. Additionally, I excel in
+                Firebase for real-time database management and deployment. My
+                focus on user experience and innovation ensures that each
+                project meets high standards and exceeds expectations.
               </p>
             )}
           </div>
