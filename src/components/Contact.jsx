@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MotionWrapper } from "../hoc";
